@@ -7,20 +7,15 @@
   <link rel="stylesheet" href="css/styles.css" />
 </head>
 <body>
-  <!-- Encabezado superior -->
   <div class="top-bar">
     <div class="logo-header">Community Team</div>
     <div class="status-wrapper">
       <span class="top-text">Experts in solutions</span>
       <span class="status">Available <span class="dot"></span> for work</span>
-      <select class="language-selector">
-        <option value="EN">EN</option>
-        <option value="ES">ES</option>
-      </select>
+      <div id="google_translate_element"></div>
     </div>
   </div>
 
-  <!-- Sección principal -->
   <main>
     <section class="hero">
       <div class="hero-left">
@@ -42,7 +37,6 @@
     </section>
   </main>
 
-  <!-- Pie de página con navegación -->
   <footer>
     <nav class="footer-nav">
       <a href="#" class="active">HOME</a>
@@ -53,5 +47,36 @@
   </footer>
 
   <script src="js/script.js"></script>
+  <script type="text/javascript">
+    function googleTranslateElementInit() {
+     
+      const browserLanguage = navigator.language.split('-')[0]; 
+      
+      let targetLanguage = 'en'; 
+      if (browserLanguage === 'es') {
+        targetLanguage = 'es'; 
+      }
+
+      new google.translate.TranslateElement({
+        pageLanguage: 'en', 
+        includedLanguages: 'es,en', 
+        layout: google.translate.TranslateElement.InlineLayout.SIMPLE,
+        autoDisplay: false 
+      }, 'google_translate_element');
+
+      
+      if (browserLanguage === 'es') {
+        
+        setTimeout(() => {
+          const selectElement = document.querySelector('.goog-te-combo');
+          if (selectElement) {
+            selectElement.value = 'es'; 
+            selectElement.dispatchEvent(new Event('change')); // Dispara el evento de cambio para aplicar la traducción
+          }
+        }, 500); 
+      }
+    }
+  </script>
+  <script type="text/javascript" src="//translate.google.com/translate_a/element.js?cb=googleTranslateElementInit"></script>
 </body>
 </html>
