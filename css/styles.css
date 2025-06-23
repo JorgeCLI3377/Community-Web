@@ -22,8 +22,8 @@ body {
 
 main {
     flex: 1; 
-    padding-bottom: 90px; /* Suficiente espacio para el footer fijo */
-    padding-top: 40px; /* <--- CAMBIO AQUÍ: Reducido de 60px a 40px */
+    padding-bottom: 90px; 
+    padding-top: 40px; 
     padding-left: 5%;
     padding-right: 5%;
     width: 100%; 
@@ -100,8 +100,8 @@ main {
 .hero {
     display: flex;
     justify-content: space-between; 
-    align-items: flex-start; /* <--- CAMBIO AQUÍ: Alinea el contenido del hero arriba, de `center` a `flex-start` */
-    padding: 15px 0 40px; /* <--- CAMBIO AQUÍ: Reducido el padding-top de 30px a 15px */
+    align-items: flex-start; 
+    padding: 15px 0 40px; 
     flex-wrap: nowrap; 
     gap: 40px; 
     text-align: left; 
@@ -152,20 +152,21 @@ main {
     color: #19e2c5;
     text-transform: uppercase;
     letter-spacing: 1px;
-    margin-bottom: 8px; /* <--- CAMBIO AQUÍ: Reducido de 12px a 8px */
+    margin-top: 40px; 
+    margin-bottom: 8px; 
 }
 
 .hero-right h1 {
     font-size: 3rem;
     line-height: 1.2;
-    margin-bottom: 15px; /* <--- CAMBIO AQUÍ: Reducido de 20px a 15px */
+    margin-bottom: 15px; 
     color: #ffffff;
 }
 
 .hero-right p {
     font-size: 16px;
     color: #a6bcb8;
-    margin-bottom: 20px; /* <--- CAMBIO AQUÍ: Reducido de 30px a 20px */
+    margin-bottom: 5px; /* <-- CAMBIO CLAVE AQUÍ: Reducido para acercar el botón */
 }
 
 .btn-wa {
@@ -181,6 +182,7 @@ main {
     font-size: 15px;
     box-shadow: 0px 0px 12px rgba(0, 255, 181, 0.15);
     border: 1px solid rgba(0, 255, 181, 0.3);
+    margin-top: 0px; /* <-- CAMBIO CLAVE AQUÍ: Ajustado a 0px o incluso un valor negativo si es necesario */
 }
 
 .btn-wa img {
@@ -672,23 +674,27 @@ hr {
         font-size: 2.5rem; 
     }
 
-    main { /* <--- CAMBIO AQUÍ: Asegurar que el main se ajuste en tabletas */
-        padding-top: 50px; /* Ajuste para media, puede ser diferente al de desktop */
+    main { 
+        padding-top: 50px; 
     }
 
-    .hero { /* <--- CAMBIO AQUÍ: Ajuste para el hero en tabletas */
-        padding: 20px 0 40px; /* Reducido para tabletas */
-        align-items: flex-start; /* Mantener la alineación hacia arriba */
+    .hero { 
+        padding: 20px 0 40px; 
+        align-items: flex-start; 
     }
     
-    .hero-right h2 { /* <--- CAMBIO AQUÍ: Reducido para tabletas */
+    .hero-right h2 { 
         margin-bottom: 6px; 
     }
-    .hero-right h1 { /* <--- CAMBIO AQUÍ: Reducido para tabletas */
+    .hero-right h1 { 
         margin-bottom: 12px; 
     }
-    .hero-right p { /* <--- CAMBIO AQUÍ: Reducido para tabletas */
-        margin-bottom: 18px; 
+    .hero-right p { 
+        margin-bottom: 5px; /* <-- CAMBIO CLAVE AQUÍ: Ajustado para tablets */
+    }
+
+    .btn-wa { 
+        margin-top: 0px; /* <-- CAMBIO CLAVE AQUÍ: Ajustado para tablets */
     }
 }
 
@@ -712,7 +718,7 @@ hr {
         flex-direction: column;
         text-align: center;
         flex-wrap: wrap; 
-        align-items: center; /* <--- CAMBIO AQUÍ: Volver a centrar en móviles para una mejor estética */
+        align-items: center; 
     }
 
     .hero-right {
@@ -731,15 +737,16 @@ hr {
         max-width: 90%; 
     }
 
-    .badge { /* <--- CAMBIO AQUÍ: Para centrar el badge en móvil */
+    .badge { 
         margin-left: auto;
         margin-right: auto;
-        display: block; /* Ocupa el ancho completo para centrar mejor */
-        width: fit-content; /* Se ajusta al contenido */
+        display: block; 
+        width: fit-content; 
     }
 
     .btn-wa {
         margin: 0 auto; 
+        margin-top: 0px; /* <-- CAMBIO CLAVE AQUÍ: Ajustado para móviles */
     }
 
     footer {
@@ -769,7 +776,7 @@ hr {
     }
 
     main {
-        padding-top: 40px; /* <--- CAMBIO AQUÍ: Ajustado a 40px para móviles */
+        padding-top: 40px; 
         padding-left: 5%;
         padding-right: 5%;
     }
@@ -874,6 +881,7 @@ hr {
     
     .hero-right p {
         font-size: 15px;
+        margin-bottom: 5px; /* <-- CAMBIO CLAVE AQUÍ: Ajustado para móviles muy pequeños */
     }
 
     .profile-wrap {
@@ -918,16 +926,17 @@ hr {
     }
 
     .hero { 
-        padding: 10px 0 20px; /* <--- CAMBIO AQUÍ: Reducido aún más el padding del hero para móviles muy pequeños */
+        padding: 10px 0 20px; 
     }
     
-    .hero-right h2 { /* <--- CAMBIO AQUÍ: Reducido para móviles muy pequeños */
+    .hero-right h2 { 
         margin-bottom: 5px; 
     }
-    .hero-right h1 { /* <--- CAMBIO AQUÍ: Reducido para móviles muy pequeños */
+    .hero-right h1 { 
         margin-bottom: 10px; 
     }
-    .hero-right p { /* <--- CAMBIO AQUÍ: Reducido para móviles muy pequeños */
-        margin-bottom: 15px; 
+
+    .btn-wa { 
+        margin-top: 0px; /* <-- CAMBIO CLAVE AQUÍ: Ajustado para móviles muy pequeños */
     }
 }

@@ -4,7 +4,7 @@ document.addEventListener('DOMContentLoaded', () => {
     const teamMembersData = [
         {
             name: "Jorge Meneses",
-            photo: "assets/img/team/hommie.webp", // Replace with actual image path
+            photo: "assets/img/team/jorgeimg.jpeg", // Replace with actual image path
             skills: [
                 { name: "Java -> Springboot, JWT, Hibernate", percentage: 90 },
                 { name: "Python-> flask, FastAPI", percentage: 90 },
@@ -30,7 +30,7 @@ document.addEventListener('DOMContentLoaded', () => {
         },
         {
             name: "Peter Osorio",
-            photo: "assets/img/team/hommie.webp", 
+            photo: "assets/img/team/peter.jpeg", 
             skills: [
                 { name: "JavaScript ,TypeScript and React", percentage: 90 },
                 { name: "DATABASES -> PostgreSQL, SQL SERVER ", percentage: 88 },
