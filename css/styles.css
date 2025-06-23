@@ -21,14 +21,14 @@ body {
 }
 
 main {
-    flex: 1;
+    flex: 1; 
     padding-bottom: 90px; /* Suficiente espacio para el footer fijo */
-    padding-top: 80px; /* Suficiente espacio para la top-bar fija */
+    padding-top: 40px; /* <--- CAMBIO AQUÍ: Reducido de 60px a 40px */
     padding-left: 5%;
     padding-right: 5%;
-    width: 100%; /* Asegura que el main ocupe todo el ancho disponible */
-    max-width: 1200px; /* Limita el ancho máximo para mejor legibilidad en pantallas grandes */
-    margin: 0 auto; /* Centra el contenido del main */
+    width: 100%; 
+    max-width: 1200px; 
+    margin: 0 auto; 
 }
 
 /* --- TOP BAR --- */
@@ -46,14 +46,12 @@ main {
     z-index: 1001;
     backdrop-filter: blur(5px);
     background-color: rgba(0, 0, 0, 0.6);
-    /* flex-wrap y otros ajustes específicos para móviles se moverán a la media query */
 }
 
 .logo-header {
     font-size: 22px;
     font-weight: 700;
     color: #ffffff;
-    /* EFECTO DE NEÓN RESTAURADO */
     text-shadow:
         0 0 5px #00ffd5,
         0 0 10px #00ffd5,
@@ -68,8 +66,7 @@ main {
     gap: 16px;
     font-weight: 500;
     color: #b9e2dd;
-    justify-content: flex-end; /* Alinea a la derecha por defecto en PC */
-    /* flex-wrap se moverá a la media query */
+    justify-content: flex-end; 
 }
 
 .top-text {
@@ -102,18 +99,18 @@ main {
 /* --- HERO SECTION (Home Page) --- */
 .hero {
     display: flex;
-    justify-content: space-between; /* Mantener espacio entre elementos en PC */
-    align-items: center;
-    padding: 60px 0 40px;
-    flex-wrap: nowrap; /* Evitar que se envuelvan en PC */
-    gap: 40px; /* Espacio entre los elementos izquierdo y derecho */
-    text-align: left; /* Alineación izquierda general para PC */
+    justify-content: space-between; 
+    align-items: flex-start; /* <--- CAMBIO AQUÍ: Alinea el contenido del hero arriba, de `center` a `flex-start` */
+    padding: 15px 0 40px; /* <--- CAMBIO AQUÍ: Reducido el padding-top de 30px a 15px */
+    flex-wrap: nowrap; 
+    gap: 40px; 
+    text-align: left; 
 }
 
 .hero-left {
     display: flex;
     flex-direction: column;
-    align-items: center; /* Centra el contenido horizontalmente */
+    align-items: center; 
 }
 
 .profile-wrap {
@@ -121,8 +118,7 @@ main {
     height: 420px;
     border-radius: 50%;
     overflow: hidden;
-    flex-shrink: 0; /* Evita que la imagen se encoja más de lo necesario */
-    /* max-width: 90% se aplicará solo en móviles */
+    flex-shrink: 0; 
 }
 
 .profile-wrap img {
@@ -148,7 +144,7 @@ main {
 
 .hero-right {
     max-width: 600px;
-    text-align: left; /* Alinea el texto a la izquierda en PC */
+    text-align: left; 
 }
 
 .hero-right h2 {
@@ -156,20 +152,20 @@ main {
     color: #19e2c5;
     text-transform: uppercase;
     letter-spacing: 1px;
-    margin-bottom: 12px;
+    margin-bottom: 8px; /* <--- CAMBIO AQUÍ: Reducido de 12px a 8px */
 }
 
 .hero-right h1 {
     font-size: 3rem;
     line-height: 1.2;
-    margin-bottom: 20px;
+    margin-bottom: 15px; /* <--- CAMBIO AQUÍ: Reducido de 20px a 15px */
     color: #ffffff;
 }
 
 .hero-right p {
     font-size: 16px;
     color: #a6bcb8;
-    margin-bottom: 30px;
+    margin-bottom: 20px; /* <--- CAMBIO AQUÍ: Reducido de 30px a 20px */
 }
 
 .btn-wa {
@@ -217,7 +213,7 @@ footer {
     display: flex;
     gap: 30px;
     flex-wrap: wrap;
-    justify-content: center; /* Centra los elementos del footer */
+    justify-content: center; 
 }
 
 .footer-nav a {
@@ -244,7 +240,7 @@ footer {
 .contact-content {
     max-width: 900px;
     width: 100%;
-    text-align: left; /* Alineación izquierda por defecto para PC */
+    text-align: left; 
     padding-top: 20px;
 }
 
@@ -253,7 +249,7 @@ footer {
     color: #19e2c5;
     text-transform: uppercase;
     letter-spacing: 1px;
-    text-align: center; /* Esto siempre centrado, incluso en PC */
+    text-align: center; 
     margin-bottom: 12px;
 }
 
@@ -261,7 +257,7 @@ footer {
     font-size: 3rem;
     line-height: 1.2;
     color: #ffffff;
-    text-align: center; /* Esto siempre centrado, incluso en PC */
+    text-align: center; 
     margin-bottom: 20px;
 }
 
@@ -270,27 +266,27 @@ footer {
     color: #a6bcb8;
     margin-bottom: 20px;
     line-height: 1.6;
-    text-align: justify; /* Justificado por defecto para PC */
+    text-align: justify; 
 }
 
 .contact-details {
     display: flex;
-    flex-direction: row; /* Se muestra en fila por defecto en PC */
+    flex-direction: row; 
     gap: 20px;
     margin-bottom: 40px;
-    align-items: center; /* Centra los elementos verticalmente */
-    justify-content: center; /* Centra los elementos horizontalmente en PC */
+    align-items: center; 
+    justify-content: center; 
 }
 
 .detail-item {
     display: flex;
     align-items: center;
-    justify-content: center; /* Centrado en items individuales */
+    justify-content: center; 
     gap: 15px;
     font-size: 18px;
     color: #d8f3f1;
-    flex-wrap: nowrap; /* Evita que los elementos se envuelvan en PC */
-    text-align: left; /* Alineación de texto por defecto en PC */
+    flex-wrap: nowrap; 
+    text-align: left; 
 }
 
 .contact-icon {
@@ -305,7 +301,7 @@ footer {
     color: #19e2c5;
     margin-bottom: 15px;
     letter-spacing: 0.5px;
-    text-align: left; /* Alineación izquierda por defecto para PC */
+    text-align: left; 
 }
 
 .contact-content ul {
@@ -313,8 +309,8 @@ footer {
     padding-left: 25px;
     color: #d8f3f1;
     line-height: 1.9;
-    text-align: left; /* Alineación izquierda por defecto para PC */
-    list-style-position: outside; /* Viñetas fuera por defecto para PC */
+    text-align: left; 
+    list-style-position: outside; 
 }
 
 .contact-content ul li {
@@ -574,9 +570,8 @@ hr {
 }
 
 /* --- ELEGANT GLOW TEXT EFFECT (GLOBAL) --- */
-/* Esta regla ahora aplica el glow a elementos con la clase .glow-text, excepto si también tienen .typing-effect */
 .glow-text:not(.typing-effect) {
-    font-size: 3rem; /* Puedes ajustar si necesitas que esta regla aplique a otros elementos con glow-text */
+    font-size: 3rem; 
     line-height: 1.2;
     color: #ffffff;
     text-align: center;
@@ -588,7 +583,6 @@ hr {
     animation: pulseGlow 4s ease-in-out infinite;
 }
 
-/* Se mantiene el glow para el logo-header explícitamente */
 .logo-header {
     text-shadow:
         0 0 5px #00ffd5,
@@ -597,7 +591,6 @@ hr {
         0 0 20px #00ffbf;
     animation: pulseGlow 4s ease-in-out infinite;
 }
-
 
 @keyframes pulseGlow {
     0% {
@@ -625,20 +618,19 @@ hr {
 
 /* --- Efecto de escritura elegante AÑADIDO --- */
 .typing-effect {
-    overflow: hidden; /* Oculta el texto que aún no se ha "escrito" */
-    white-space: nowrap; /* Evita que el texto se envuelva */
+    overflow: hidden; 
+    white-space: nowrap; 
     margin: 0 auto;
-    letter-spacing: .15em; /* Espaciado entre letras, puedes ajustarlo */
+    letter-spacing: .15em; 
     animation: typing 3.5s steps(40, end) forwards, blink-caret .75s step-end infinite;
-    width: 0; /* Inicialmente el ancho es 0 */
-    border-right: .15em solid #00ffd5; /* Simula el cursor de escritura */
+    width: 0; 
+    border-right: .15em solid #00ffd5; 
     
-    /* Asegúrate de que el texto del efecto de escritura tenga el estilo de h1 pero sin el glow inicial */
-    font-size: 3rem; /* Tamaño de fuente de tu h1 */
+    font-size: 3rem; 
     line-height: 1.2;
     color: #ffffff;
-    text-align: left; /* Alineación del h1 en el hero-right */
-    text-shadow: none; /* Elimina la sombra de texto inicial para el efecto de escritura */
+    text-align: left; 
+    text-shadow: none; 
 }
 
 /* Animación de escritura */
@@ -676,9 +668,27 @@ hr {
         max-width: 500px;
     }
 
-    /* Ajuste para el efecto de escritura en pantallas medianas */
     .typing-effect {
-        font-size: 2.5rem; /* Ajusta el tamaño de fuente para pantallas medianas */
+        font-size: 2.5rem; 
+    }
+
+    main { /* <--- CAMBIO AQUÍ: Asegurar que el main se ajuste en tabletas */
+        padding-top: 50px; /* Ajuste para media, puede ser diferente al de desktop */
+    }
+
+    .hero { /* <--- CAMBIO AQUÍ: Ajuste para el hero en tabletas */
+        padding: 20px 0 40px; /* Reducido para tabletas */
+        align-items: flex-start; /* Mantener la alineación hacia arriba */
+    }
+    
+    .hero-right h2 { /* <--- CAMBIO AQUÍ: Reducido para tabletas */
+        margin-bottom: 6px; 
+    }
+    .hero-right h1 { /* <--- CAMBIO AQUÍ: Reducido para tabletas */
+        margin-bottom: 12px; 
+    }
+    .hero-right p { /* <--- CAMBIO AQUÍ: Reducido para tabletas */
+        margin-bottom: 18px; 
     }
 }
 
@@ -689,24 +699,25 @@ hr {
         align-items: flex-start;
         gap: 8px;
         padding: 12px 5%;
-        flex-wrap: wrap; /* Permite que los elementos se envuelvan */
+        flex-wrap: wrap; 
     }
 
     .status-wrapper {
         flex-wrap: wrap;
         justify-content: flex-start;
-        width: 100%; /* Ocupa todo el ancho disponible para evitar desbordes */
+        width: 100%; 
     }
 
     .hero {
         flex-direction: column;
         text-align: center;
-        flex-wrap: wrap; /* Ahora sí, permite que los elementos se apilen */
+        flex-wrap: wrap; 
+        align-items: center; /* <--- CAMBIO AQUÍ: Volver a centrar en móviles para una mejor estética */
     }
 
     .hero-right {
-        text-align: center; /* Centra el texto en el hero-right para móviles */
-        padding: 0 5%; /* Añade padding a los lados para no pegar el texto */
+        text-align: center; 
+        padding: 0 5%; 
     }
     
     .hero-right h1 {
@@ -717,17 +728,28 @@ hr {
         width: 280px;
         height: 280px;
         margin-bottom: 20px;
-        max-width: 90%; /* Asegura que no se desborde en pantallas muy pequeñas */
+        max-width: 90%; 
+    }
+
+    .badge { /* <--- CAMBIO AQUÍ: Para centrar el badge en móvil */
+        margin-left: auto;
+        margin-right: auto;
+        display: block; /* Ocupa el ancho completo para centrar mejor */
+        width: fit-content; /* Se ajusta al contenido */
     }
 
     .btn-wa {
-        margin: 0 auto; /* Centra el botón */
+        margin: 0 auto; 
+    }
+
+    footer {
+        padding: 20px 3%; 
     }
 
     .footer-nav {
         flex-direction: column;
         align-items: center;
-        gap: 15px; /* Reduce el espacio entre elementos del footer */
+        gap: 15px; 
     }
 
     .contact-content h1 {
@@ -735,7 +757,7 @@ hr {
     }
 
     .contact-details {
-        flex-direction: column; /* Apila los detalles en móviles */
+        flex-direction: column; 
         text-align: center;
     }
 
@@ -743,36 +765,36 @@ hr {
         flex-direction: column;
         text-align: center;
         gap: 5px;
-        flex-wrap: wrap; /* Permite que los elementos se envuelvan */
+        flex-wrap: wrap; 
     }
 
     main {
-        padding-top: 80px; /* Asegura espacio suficiente para la top-bar en móviles */
+        padding-top: 40px; /* <--- CAMBIO AQUÍ: Ajustado a 40px para móviles */
         padding-left: 5%;
         padding-right: 5%;
     }
 
     .contact-content {
-        text-align: center; /* Centra el contenido general de contacto en móviles */
+        text-align: center; 
     }
     .contact-content p {
-        text-align: center; /* Centra el texto de los párrafos en contacto */
+        text-align: center; 
     }
 
     .contact-content h3 {
         font-size: 1.4rem;
-        text-align: center; /* Centra el subtítulo h3 */
+        text-align: center; 
     }
 
     .contact-content ul {
         padding-left: 15px;
-        text-align: center; /* Centra la lista de servicios */
-        list-style-position: inside; /* Mueve las viñetas dentro del contenido */
+        text-align: center; 
+        list-style-position: inside; 
     }
     
     .contact-content ul li {
-        text-align: left; /* Alinea el texto de cada item de la lista a la izquierda */
-        padding-left: 0; /* Asegura que no haya padding extra que desalinee */
+        text-align: left; 
+        padding-left: 0; 
     }
 
     .contact-content .btn-wa {
@@ -783,7 +805,7 @@ hr {
     }
 
     .team-section {
-        grid-template-columns: repeat(auto-fit, minmax(140px, 1fr)); /* Tarjetas más pequeñas en móviles */
+        grid-template-columns: repeat(auto-fit, minmax(140px, 1fr)); 
         gap: 20px;
         padding: 60px 0 100px;
     }
@@ -825,23 +847,22 @@ hr {
     }
 
     .skills-grid {
-        grid-template-columns: 1fr; /* Una columna en pantallas más pequeñas */
+        grid-template-columns: 1fr; 
         padding: 0;
     }
 
     .skill-item {
-        align-items: center; /* Centra el nombre de la habilidad y la barra */
+        align-items: center; 
     }
     
     .skill-name {
-        text-align: center; /* Centra el nombre de la habilidad */
+        text-align: center; 
         width: 100%;
     }
 
-    /* Ajuste para el efecto de escritura en móviles */
     .typing-effect {
-        font-size: 2.2rem; /* Ajusta el tamaño de fuente para móviles */
-        text-align: center; /* Centra el texto del efecto de escritura en móviles */
+        font-size: 2.2rem; 
+        text-align: center; 
     }
 }
 
@@ -861,7 +882,7 @@ hr {
     }
 
     .top-bar {
-        padding: 10px 3%; /* Reduce el padding de la top-bar */
+        padding: 10px 3%; 
     }
 
     .logo-header {
@@ -869,12 +890,12 @@ hr {
     }
 
     .status-wrapper {
-        gap: 10px; /* Reduce el espacio entre elementos del status */
+        gap: 10px; 
         font-size: 12px;
     }
 
     .team-section {
-        grid-template-columns: 1fr; /* Apila los miembros verticalmente en pantallas muy pequeñas */
+        grid-template-columns: 1fr; 
     }
     .modal-content {
         margin: 15% auto;
@@ -892,8 +913,21 @@ hr {
         gap: 15px;
     }
 
-    /* Ajuste para el efecto de escritura en teléfonos muy pequeños */
     .typing-effect {
-        font-size: 1.8rem; /* Ajusta el tamaño de fuente para teléfonos muy pequeños */
+        font-size: 1.8rem; 
+    }
+
+    .hero { 
+        padding: 10px 0 20px; /* <--- CAMBIO AQUÍ: Reducido aún más el padding del hero para móviles muy pequeños */
+    }
+    
+    .hero-right h2 { /* <--- CAMBIO AQUÍ: Reducido para móviles muy pequeños */
+        margin-bottom: 5px; 
+    }
+    .hero-right h1 { /* <--- CAMBIO AQUÍ: Reducido para móviles muy pequeños */
+        margin-bottom: 10px; 
+    }
+    .hero-right p { /* <--- CAMBIO AQUÍ: Reducido para móviles muy pequeños */
+        margin-bottom: 15px; 
     }
 }
