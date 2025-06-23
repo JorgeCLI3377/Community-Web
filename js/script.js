@@ -19,7 +19,7 @@ document.addEventListener('DOMContentLoaded', () => {
         },
         {
             name: "Rodrigo Zabala",
-            photo: "assets/img/team/hommie.webp", // Replace with actual image path
+            photo: "assets/img/team/Rodrigo.jpeg", // Replace with actual image path
             skills: [
                 { name: "TypeScript", percentage: 92 },
                 { name: "JavaScript", percentage: 80 },
@@ -40,59 +40,26 @@ document.addEventListener('DOMContentLoaded', () => {
         },
         {
             name: "Gregory Perozo",
-            photo: "assets/img/team/hommie.webp", // Replace with actual image path
+            photo: "assets/img/team/gregory.jpeg", // Replace with actual image path
             skills: [
-                { name: "Frontend Development (React, Vue)", percentage: 95 },
-                { name: "JavaScript & TypeScript", percentage: 90 },
+                { name: "Python -> Django", percentage: 95 },
+                { name: "Ruby on Rails", percentage: 90 },
                 { name: "API Integration", percentage: 88 },
-                { name: "Performance Optimization", percentage: 82 },
+                { name: "PostgreSQL", percentage: 70 }
+            ]
+        },
+        {
+            name: "Luis Miguel Cote",
+            photo: "assets/img/team/luis.jpeg", // Replace with actual image path
+            skills: [
+                { name: "c, c++, c#, python, .net , Maui, flask and FastAPI", percentage: 95 },
+                { name: "Databases NoSQL", percentage: 90 },
+                { name: "Windows and Linux", percentage: 88 },
+                { name: "dev in raspberry pi y de microcontroladores como esp32, esp8266, pic16f877A", percentage: 82 },
                 { name: "Version Control (Git)", percentage: 93 }
-            ]
-        },
-        {
-            name: "Ana Lopez",
-            photo: "assets/img/team/hommie.webp", // Replace with actual image path
-            skills: [
-                { name: "Frontend Development (React, Vue)", percentage: 95 },
-                { name: "JavaScript & TypeScript", percentage: 90 },
-                { name: "API Integration", percentage: 88 },
-                { name: "Performance Optimization", percentage: 82 },
-                { name: "Version Control (Git)", percentage: 93 }
-            ]
-        },
-        {
-            name: "Juan Perez",
-            photo: "assets/img/team/hommie.webp", // Replace with actual image path
-            skills: [
-                { name: "Backend Development (Node.js, Python)", percentage: 90 },
-                { name: "Database Management (SQL, NoSQL)", percentage: 85 },
-                { name: "Cloud Services (AWS, Azure)", percentage: 78 },
-                { name: "RESTful APIs", percentage: 92 },
-                { name: "Serverless Architectures", percentage: 80 }
-            ]
-        },
-        {
-            name: "Sofia Rodriguez",
-            photo: "assets/img/team/hommie.webp", // Replace with actual image path
-            skills: [
-                { name: "Digital Marketing Strategy", percentage: 88 },
-                { name: "Content Creation & SEO", percentage: 91 },
-                { name: "Social Media Management", percentage: 85 },
-                { name: "Email Marketing", percentage: 79 },
-                { name: "Analytics & Reporting", percentage: 84 }
-            ]
-        },
-        {
-            name: "Ricardo Martinez",
-            photo: "assets/img/team/hommie.webp", // Replace with actual image path
-            skills: [
-                { name: "Project Management", percentage: 94 },
-                { name: "Agile & Scrum Methodologies", percentage: 89 },
-                { name: "Client Relationship Management", percentage: 90 },
-                { name: "Budget & Resource Allocation", percentage: 85 },
-                { name: "Risk Assessment", percentage: 80 }
             ]
         }
+        
     ];
 
     const teamSection = document.querySelector('.team-section');
