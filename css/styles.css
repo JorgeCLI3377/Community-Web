@@ -213,9 +213,11 @@ footer {
 
 .footer-nav {
     display: flex;
+    flex-direction: row; /* Asegura que sea siempre horizontal */
     gap: 30px;
-    flex-wrap: wrap;
+    flex-wrap: wrap; /* Permite que los elementos se envuelvan a la siguiente línea */
     justify-content: center; 
+    align-items: center; /* Alinea verticalmente los ítems */
 }
 
 .footer-nav a {
@@ -223,6 +225,7 @@ footer {
     text-decoration: none;
     font-size: 14px;
     padding-bottom: 4px;
+    white-space: nowrap; /* Evita que el texto de los enlaces se rompa */
 }
 
 .footer-nav a.active,
@@ -754,9 +757,9 @@ hr {
     }
 
     .footer-nav {
-        flex-direction: column;
+        /* flex-direction: column; ELIMINADO PARA MANTENERLO HORIZONTAL */
         align-items: center;
-        gap: 15px; 
+        gap: 15px; /* Se mantiene el gap ajustado para móviles */
     }
 
     .contact-content h1 {
