@@ -10,8 +10,52 @@ html, body {
     height: 100%;
     min-height: 100vh;
     font-family: 'Inter', sans-serif;
-    background: radial-gradient(circle at right, #031d1c 20%, #000 80%);
+    /* Quitar el background original para que el carrusel de fondo funcione */
+    /* background: radial-gradient(circle at right, #031d1c 20%, #000 80%); */
     color: #ffffff;
+    position: relative; /* Necesario para el posicionamiento absoluto del carrusel */
+    overflow-x: hidden; /* Evita scroll horizontal si las imágenes son muy anchas */
+}
+
+/* --- BACKGROUND CAROUSEL STYLES --- */
+.background-carousel {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    overflow: hidden;
+    z-index: -1; /* Envía el carrusel al fondo */
+    background-color: #000; /* Fondo de fallback si las imágenes no cargan */
+}
+
+.carousel-image {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-size: cover;
+    background-position: center;
+    opacity: 0; /* Todas las imágenes ocultas por defecto */
+    transition: opacity 1.5s ease-in-out; /* Transición suave de la opacidad */
+    will-change: opacity; /* Optimización para animaciones */
+}
+
+.carousel-image.active {
+    opacity: 1; /* La imagen activa se muestra */
+}
+
+/* Puedes añadir un ligero overlay para que el texto sea más legible */
+.background-carousel::after {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.4); /* Oscurece el fondo */
+    z-index: 0; /* Encima de las imágenes del carrusel, debajo del contenido */
 }
 
 /* --- LAYOUT BASE --- */
@@ -29,6 +73,8 @@ main {
     width: 100%; 
     max-width: 1200px; 
     margin: 0 auto; 
+    position: relative; /* Asegura que el contenido esté sobre el carrusel */
+    z-index: 1; /* Asegura que el contenido esté sobre el overlay */
 }
 
 /* --- TOP BAR --- */
@@ -166,7 +212,7 @@ main {
 .hero-right p {
     font-size: 16px;
     color: #a6bcb8;
-    margin-bottom: 5px; /* <-- CAMBIO CLAVE AQUÍ: Reducido para acercar el botón */
+    margin-bottom: 5px; 
 }
 
 .btn-wa {
@@ -182,7 +228,7 @@ main {
     font-size: 15px;
     box-shadow: 0px 0px 12px rgba(0, 255, 181, 0.15);
     border: 1px solid rgba(0, 255, 181, 0.3);
-    margin-top: 0px; /* <-- CAMBIO CLAVE AQUÍ: Ajustado a 0px o incluso un valor negativo si es necesario */
+    margin-top: 0px; 
 }
 
 .btn-wa img {
@@ -693,28 +739,37 @@ hr {
         margin-bottom: 12px; 
     }
     .hero-right p { 
-        margin-bottom: 5px; /* <-- CAMBIO CLAVE AQUÍ: Ajustado para tablets */
+        margin-bottom: 5px; 
     }
 
     .btn-wa { 
-        margin-top: 0px; /* <-- CAMBIO CLAVE AQUÍ: Ajustado para tablets */
+        margin-top: 0px; 
     }
 }
 
 /* Ajustes para pantallas pequeñas (móviles y tabletas pequeñas) */
 @media (max-width: 768px) {
     .top-bar {
-        flex-direction: column;
-        align-items: flex-start;
-        gap: 8px;
+        /* Se elimina flex-direction: column y align-items: flex-start para controlar mejor el centrado */
+        flex-direction: row; /* Mantener la dirección de fila, permitir el wrap */
+        flex-wrap: wrap; /* Permitir que los elementos salten de línea */
+        justify-content: center; /* Centrar los elementos horizontalmente */
+        align-items: center; /* Centrar los elementos verticalmente */
+        gap: 10px; /* Reducir un poco el espacio entre elementos */
         padding: 12px 5%;
-        flex-wrap: wrap; 
+    }
+
+    .logo-header {
+        width: 100%; /* El logo toma todo el ancho para centrarse mejor */
+        text-align: center; /* Centrar el texto del logo */
+        margin-bottom: 5px; /* Espacio debajo del logo */
     }
 
     .status-wrapper {
         flex-wrap: wrap;
-        justify-content: flex-start;
+        justify-content: center; /* Centrar los elementos del status-wrapper */
         width: 100%; 
+        gap: 10px; /* Reducir un poco el espacio entre elementos del status */
     }
 
     .hero {
@@ -749,7 +804,7 @@ hr {
 
     .btn-wa {
         margin: 0 auto; 
-        margin-top: 0px; /* <-- CAMBIO CLAVE AQUÍ: Ajustado para móviles */
+        margin-top: 0px; 
     }
 
     footer {
@@ -759,7 +814,7 @@ hr {
     .footer-nav {
         /* flex-direction: column; ELIMINADO PARA MANTENERLO HORIZONTAL */
         align-items: center;
-        gap: 15px; /* Se mantiene el gap ajustado para móviles */
+        gap: 15px; 
     }
 
     .contact-content h1 {
@@ -884,7 +939,7 @@ hr {
     
     .hero-right p {
         font-size: 15px;
-        margin-bottom: 5px; /* <-- CAMBIO CLAVE AQUÍ: Ajustado para móviles muy pequeños */
+        margin-bottom: 5px; 
     }
 
     .profile-wrap {
@@ -894,14 +949,16 @@ hr {
 
     .top-bar {
         padding: 10px 3%; 
+        gap: 8px; /* Un poco menos de espacio */
     }
 
     .logo-header {
         font-size: 20px;
+        margin-bottom: 3px; /* Ajuste menor de espacio */
     }
 
     .status-wrapper {
-        gap: 10px; 
+        gap: 8px; /* Un poco menos de espacio */
         font-size: 12px;
     }
 
@@ -940,6 +997,6 @@ hr {
     }
 
     .btn-wa { 
-        margin-top: 0px; /* <-- CAMBIO CLAVE AQUÍ: Ajustado para móviles muy pequeños */
+        margin-top: 0px; 
     }
 }

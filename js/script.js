@@ -1,6 +1,30 @@
 document.addEventListener('DOMContentLoaded', () => {
     console.log('Eve Kayser landing page cargado.');
 
+    // --- Carrusel de Fondo ---
+    const carouselImages = document.querySelectorAll('.carousel-image');
+    let currentImageIndex = 0;
+
+    function showNextImage() {
+        // Oculta la imagen actual
+        carouselImages[currentImageIndex].classList.remove('active');
+
+        // Calcula el índice de la siguiente imagen
+        currentImageIndex = (currentImageIndex + 1) % carouselImages.length;
+
+        // Muestra la siguiente imagen
+        carouselImages[currentImageIndex].classList.add('active');
+    }
+
+    // Muestra la primera imagen al cargar
+    if (carouselImages.length > 0) {
+        carouselImages[currentImageIndex].classList.add('active');
+        // Inicia el carrusel solo si hay imágenes
+        setInterval(showNextImage, 5000); // Cambia cada 5 segundos
+    }
+    // --- Fin Carrusel de Fondo ---
+
+
     const teamMembersData = [
         {
             name: "Jorge Meneses",
@@ -149,6 +173,4 @@ document.addEventListener('DOMContentLoaded', () => {
             modal.style.display = "none";
         }
     }
-    
-    
 });

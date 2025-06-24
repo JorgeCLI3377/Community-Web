@@ -1,82 +1,59 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Community Team</title>
-  <link rel="stylesheet" href="css/styles.css" />
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Community Team</title>
+    <link rel="stylesheet" href="css/styles.css" />
 </head>
 <body>
-  <div class="top-bar">
-    <div class="logo-header">Community Team</div>
-    <div class="status-wrapper">
-      <span class="top-text">Experts in solutions</span>
-      <span class="status">Available <span class="dot"></span> for work</span>
-      <div id="google_translate_element"></div>
+    <div class="background-carousel">
+        <div class="carousel-image" style="background-image: url('assets/logos/picone.png');"></div>
+        <div class="carousel-image" style="background-image: url('assets/logos/pictwo.png');"></div>
+        <div class="carousel-image" style="background-image: url('assets/logos/picthree.png');"></div>
+        <div class="carousel-image" style="background-image: url('assets/logos/picfour.png');"></div>
+        <div class="carousel-image" style="background-image: url('assets/logos/picfive.png');"></div>
     </div>
-  </div>
 
-  <main>
-    <section class="hero">
-      <div class="hero-left">
-        <div class="profile-wrap">
-          <img src="assets/img/normal/computeroptiontwo.png" alt="Eve Kayser portrait" />
+    <div class="top-bar">
+        <div class="logo-header">Community Team</div>
+        <div class="status-wrapper">
+            <span class="top-text">Experts in solutions</span>
+            <span class="status">Available <span class="dot"></span> for work</span>
         </div>
-        <div class="badge">Experts Developers </div>
-      </div>
+    </div>
 
-      <div class="hero-right">
-        <h2>DESIGNER & WEBFLOW EXPERT</h2>
-        <h1 class="glow-text">Agency‑level web, mobile and desktop development services at freelancer rates</h1>
-        <p>Our mission as a team is to develop your custom software. We are a trusted team with the best skills in both frontend and backend.</p>
-        <a href="https://wa.me/573045517255" class="btn-wa" target="_blank">
-          Contact us via WhatsApp
-          <img src="assets/img/team/whats.png" alt="WhatsApp icon" />
-        </a>
-      </div>
-    </section>
-  </main>
+    <main>
+        <section class="hero">
+            <div class="hero-left">
+                <div class="profile-wrap">
+                    <img src="assets/img/normal/alien.png" alt="Eve Kayser portrait" />
+                </div>
+                <div class="badge">Experts Developers </div>
+            </div>
 
-  <footer>
-    <nav class="footer-nav">
-      <a href="#" class="active">HOME</a>
-      <a href="aboutme.html">ABOUT ME</a>
-      <a href="work.html">WORK</a>
-      <a href="services.html">SERVICES</a>
-    </nav>
-  </footer>
+            <div class="hero-right">
+                <h2>DESIGNER & WEBFLOW EXPERT</h2>
+                <h1 class="glow-text">Agency‑level web, mobile and desktop development services at freelancer rates</h1>
+                <p>Our mission as a team is to develop your custom software. We are a trusted team with the best skills in both frontend and backend.</p>
+                <a href="https://wa.me/573045517255" class="btn-wa" target="_blank">
+                    Contact us via WhatsApp
+                    <img src="assets/img/team/whats.png" alt="WhatsApp icon" />
+                </a>
+            </div>
+        </section>
+    </main>
 
-  <script src="js/script.js"></script>
-  <script type="text/javascript">
-    function googleTranslateElementInit() {
-     
-      const browserLanguage = navigator.language.split('-')[0]; 
-      
-      let targetLanguage = 'en'; 
-      if (browserLanguage === 'es') {
-        targetLanguage = 'es'; 
-      }
+    <footer>
+        <nav class="footer-nav">
+            <a href="#" class="active">HOME</a>
+            <a href="aboutme.html">ABOUT ME</a>
+            <a href="work.html">WORK</a>
+            <a href="services.html">SERVICES</a>
+        </nav>
+    </footer>
 
-      new google.translate.TranslateElement({
-        pageLanguage: 'en', 
-        includedLanguages: 'es,en', 
-        layout: google.translate.TranslateElement.InlineLayout.SIMPLE,
-        autoDisplay: false 
-      }, 'google_translate_element');
-
-      
-      if (browserLanguage === 'es') {
-        
-        setTimeout(() => {
-          const selectElement = document.querySelector('.goog-te-combo');
-          if (selectElement) {
-            selectElement.value = 'es'; 
-            selectElement.dispatchEvent(new Event('change')); // Dispara el evento de cambio para aplicar la traducción
-          }
-        }, 500); 
-      }
-    }
-  </script>
-  <script type="text/javascript" src="//translate.google.com/translate_a/element.js?cb=googleTranslateElementInit"></script>
+    <script src="js/script.js"></script>
+    
 </body>
 </html>
